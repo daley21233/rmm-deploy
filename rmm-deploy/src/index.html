@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RMM Deployment</title>
+    <style>
+        body { font-family: Arial; text-align: center; padding: 50px; background: #f0f2f5; }
+        .container { max-width: 500px; margin: 0 auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .btn { display: inline-block; padding: 12px 30px; background: #007bff; color: white; text-decoration: none; border-radius: 5px; margin-top: 20px; }
+        .btn:hover { background: #0056b3; }
+        input { padding: 10px; width: 80%; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 RMM Agent Deployment</h1>
+        <p>Enter your device ID to get your custom installer:</p>
+        <input type="text" id="deviceId" placeholder="e.g., john-pc" />
+        <br>
+        <button class="btn" onclick="generateLink()">Generate Installer Link</button>
+        <br>
+        <p id="linkDisplay" style="margin-top:20px; color: #007bff;"></p>
+    </div>
+    <script>
+        function generateLink() {
+            const id = document.getElementById('deviceId').value;
+            if (id) {
+                document.getElementById('linkDisplay').innerHTML = 
+                    `🔗 Your link: https://rmm-agent-system.onrender.com/deploy/${id}`;
+            }
+        }
+    </script>
+</body>
+</html>
